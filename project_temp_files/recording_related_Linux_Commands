@@ -1,0 +1,10 @@
+Commands relatesd
+# To record for 10sec and store in a file named YYYY-MM-DD-HH-MM fromat
+
+$ arecord -f cd -d 10 >> ./$(date +%F--%H-%M).mp3
+
+# To play
+$ aplay name_of_the_mp3
+
+
+

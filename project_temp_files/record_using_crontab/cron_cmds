@@ -1,0 +1,21 @@
+
+# To start #
+sudo service cron start
+
+# To stop #
+sudo service cron stop
+
+# To restart #
+sudo service cron restart
+
+# To see all jobs added in cron #
+crontab -l
+
+# To add a job in cron use your DIR#
+crontab -e
+1. Add bellow line in at last to run the job every minute
+* * * * * /home/mistral/shekhar/audio_recording_project/project_temp_files/record_using_crontab/sc.sh >> /home/mistral/shekhar/audio_recording_project/project_temp_files/record_using_crontab/cron.log 2>&1
+
+NOTE:: To define the time you can provide concrete values for minute (m), hour (h), day of month (dom), month (mon), and day of week (dow) or use '*' in these fields (for 'any'). Notice that tasks will be started based on the cron's system daemon's notion of time and timezones.
+
+
